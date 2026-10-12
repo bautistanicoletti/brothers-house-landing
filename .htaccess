@@ -1,0 +1,30 @@
+# Brother's House · configuración para Hostinger (Apache / LiteSpeed)
+
+# Forzar HTTPS (activá primero el SSL gratuito en el panel de Hostinger)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Compresión (la página pesa menos y carga más rápido)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml application/json
+</IfModule>
+
+# Tipos de archivo
+AddType image/webp .webp
+AddType font/woff2 .woff2
+
+# Caché del navegador
+<IfModule mod_headers.c>
+  # HTML, CSS y JS (incluye config.js): el navegador siempre consulta si hay versión nueva,
+  # así los cambios de precios u horarios se ven enseguida.
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Imágenes y tipografías: se guardan 30 días.
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|woff2|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

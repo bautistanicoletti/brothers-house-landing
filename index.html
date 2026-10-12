@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===== SEO =====
+       Estos textos los leen Google, WhatsApp e Instagram al compartir el link.
+       Van acá (y no en config.js) porque esos servicios no ejecutan JavaScript. -->
+  <title>Brother's House | Gimnasio en Villa Regina · Tu rutina gratis</title>
+  <meta name="description" content="Gimnasio en Villa Regina, Río Negro. Sala de musculación completa, profes que te acompañan y tu primera rutina personalizada gratis. Planes desde $35.000. Escribinos por WhatsApp.">
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- ⚠ Cuando se publique en el dominio propio, reemplazá la URL de GitHub Pages por la del dominio en las 3 líneas que la usan (canonical, og:url, og:image). -->
+  <link rel="canonical" href="https://bautistanicoletti.github.io/brothers-house-landing/">
+
+  <!-- ===== Open Graph (vista previa al compartir) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Brother's House Centro Fitness">
+  <meta property="og:title" content="Brother's House · Gimnasio en Villa Regina">
+  <meta property="og:description" content="Armá tu rutina gratis en 1 minuto y entrená con profes que te acompañan. 20 de Junio 715, Villa Regina.">
+  <meta property="og:url" content="https://bautistanicoletti.github.io/brothers-house-landing/">
+  <meta property="og:image" content="https://bautistanicoletti.github.io/brothers-house-landing/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brother's House Centro Fitness, gimnasio en Villa Regina">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/img/hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Datos del negocio + lógica (archivos chicos; se cargan acá para que el hero se pinte completo de una) -->
+  <script src="config.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#rutina">Saltar al formulario de rutina gratis</a>
+
+  <!-- Íconos (se reutilizan en toda la página) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 19l-7-7 7-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-nav" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 22 2l-9 19-2-8-8-2Z"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-rutina" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+    <symbol id="i-pesas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M17.5 6.5v11M3 9.5v5M21 9.5v5M6.5 12h11"/></symbol>
+    <symbol id="i-equipo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-corazon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+  </svg>
+
+  <!-- ============ 1. HERO ============ -->
+  <header class="hero" id="inicio">
+    <img class="hero__bg" src="assets/img/hero.webp" alt="" width="560" height="1620" fetchpriority="high" decoding="async">
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <div class="topbar">
+      <a class="topbar__logo" href="#inicio" aria-label="Brother's House, inicio">
+        <img src="assets/img/logo.webp" alt="Brother's House Centro Fitness" width="360" height="265">
+      </a>
+      <span class="status-chip" data-status hidden></span>
+    </div>
+
+    <div class="hero__inner wrap">
+      <p class="hero__eyebrow" data-c="hero.etiqueta"></p>
+      <h1 class="slab" id="hero-title"></h1>
+      <p class="hero__sub" data-c="hero.subtitulo"></p>
+      <div class="hero__ctas">
+        <a class="btn btn--red btn--lg" href="#rutina" id="hero-cta-quiz">
+          <span data-c="hero.botonRutina"></span>
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" id="hero-cta-wa" data-wa="hero" target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span data-c="hero.botonWhatsapp"></span>
+        </a>
+      </div>
+    </div>
+    <script>window.BH && BH.hero();</script>
+  </header>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker__band"><div class="ticker__track" id="ticker"></div></div></div>
+
+  <main>
+    <!-- ============ 2. BENEFICIOS ============ -->
+    <section class="section" id="beneficios" aria-labelledby="beneficios-title">
+      <div class="wrap">
+        <p class="kicker"><span>01</span> Beneficios</p>
+        <h2 class="h2" id="beneficios-title" data-c="beneficios.titulo" data-rich></h2>
+        <p class="lead" data-c="beneficios.subtitulo"></p>
+        <ul class="benefits" id="benefits"></ul>
+      </div>
+    </section>
+
+    <!-- Frase de marca -->
+    <section class="manifesto" aria-label="Nuestra filosofía">
+      <div class="wrap manifesto__inner">
+        <p class="slab slab--poster reveal" id="manifesto"></p>
+        <a class="manifesto__ig" target="_blank" rel="noopener" id="manifesto-ig">
+          <svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ 3. PLANES ============ -->
+    <section class="section" id="planes" aria-labelledby="planes-title">
+      <div class="wrap">
+        <p class="kicker"><span>02</span> Planes</p>
+        <h2 class="h2" id="planes-title" data-c="planes.titulo" data-rich></h2>
+        <p class="lead" data-c="planes.subtitulo"></p>
+        <div class="plans" id="plans"></div>
+        <p class="plans__note"><a href="#rutina" data-c="planes.nota"></a></p>
+      </div>
+    </section>
+
+    <!-- ============ 4. HORARIOS ============ -->
+    <section class="section section--alt" id="horarios" aria-labelledby="horarios-title">
+      <div class="wrap wrap--narrow">
+        <p class="kicker"><span>03</span> Cuándo venir</p>
+        <h2 class="h2" id="horarios-title" data-c="horarios.titulo" data-rich></h2>
+        <div class="hours">
+          <p class="hours__status" data-status hidden></p>
+          <table class="hours__table">
+            <caption class="sr-only">Horarios de apertura</caption>
+            <thead class="sr-only"><tr><th scope="col">Día</th><th scope="col">Horario</th></tr></thead>
+            <tbody id="hours-body"></tbody>
+          </table>
+          <p class="hours__note" data-c="horarios.nota"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. TU RUTINA GRATIS (quiz) ============ -->
+    <section class="section quiz-section" id="rutina" aria-labelledby="rutina-title">
+      <div class="wrap wrap--narrow">
+        <p class="kicker kicker--dark"><span>04</span> <span data-c="quiz.etiqueta"></span></p>
+        <h2 class="h2 h2--on-red" id="rutina-title" data-c="quiz.titulo" data-rich></h2>
+        <p class="lead lead--on-red" data-c="quiz.subtitulo"></p>
+
+        <div class="quiz" id="quiz">
+          <div class="quiz__progress" id="quiz-progress">
+            <div class="quiz__progress-text"><span id="quiz-step-label"></span><span id="quiz-pct"></span></div>
+            <div class="quiz__bar" role="progressbar" aria-labelledby="quiz-step-label" aria-valuemin="0" aria-valuemax="100" id="quiz-bar"><span></span></div>
+          </div>
+          <div class="quiz__body" id="quiz-body" aria-live="polite"></div>
+          <noscript><p class="quiz__noscript">Para usar el formulario necesitás JavaScript activado. También podés escribirnos por WhatsApp al +54 298 422-8481.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. UBICACIÓN ============ -->
+    <section class="section" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="wrap location">
+        <div class="location__info">
+          <p class="kicker"><span>05</span> Ubicación</p>
+          <h2 class="h2" id="ubicacion-title" data-c="ubicacion.titulo" data-rich></h2>
+          <p class="location__address">
+            <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span><strong id="loc-street"></strong><br><span id="loc-city"></span></span>
+          </p>
+          <p class="lead" data-c="ubicacion.texto"></p>
+          <div class="location__ctas">
+            <a class="btn btn--red" id="loc-directions" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-nav"/></svg>
+              <span data-c="ubicacion.botonComoLlegar"></span>
+            </a>
+            <a class="btn btn--ghost" data-wa="ubicacion" target="_blank" rel="noopener">
+              <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span>Consultar</span>
+            </a>
+          </div>
+        </div>
+        <div class="location__map" id="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 7. FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__cta">
+        <h2 class="h2" data-c="footer.titulo" data-rich></h2>
+        <p class="lead" data-c="footer.texto"></p>
+        <a class="btn btn--red btn--lg btn--block" data-wa="footer" target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          <span data-c="footer.boton"></span>
+        </a>
+      </div>
+
+      <div class="footer__grid">
+        <img class="footer__logo" src="assets/img/logo.webp" alt="Brother's House Centro Fitness" width="360" height="265" loading="lazy" decoding="async">
+        <ul class="footer__list">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span id="ft-address"></span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg><span id="ft-hours"></span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><a data-wa="footer_telefono" target="_blank" rel="noopener" id="ft-phone"></a></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><a id="ft-ig" target="_blank" rel="noopener"></a></li>
+        </ul>
+      </div>
+      <p class="footer__legal">© <span id="ft-year"></span> <span data-c="negocio.nombre"></span> · <span data-c="negocio.bajada"></span> · <span data-c="negocio.ciudad"></span></p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" data-wa="flotante" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <script>window.BH && BH.init();</script>
+</body>
+</html>
